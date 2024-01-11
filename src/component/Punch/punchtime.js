@@ -93,7 +93,7 @@ async function fetchEmployeeData() {
         punchOut: `${formatteddate()}T23:59:00`,
       };
 
-      const response = await axios.post('http://is-cvm62/LeaveTrackService/PunchDetailsiStrong', payload);
+      const response = await axios.post('https://punch-check-.glitch.me/api/punchDetails', payload);
       setEmployeeData(response.data); // Set response data to state
     } catch (error) {
         setisloading(false)
